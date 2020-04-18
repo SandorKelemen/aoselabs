@@ -11,11 +11,41 @@
 				$("#divcutext").animate({ left: '230px' });
 			});
 		});
-		$(document).ready(function(){
+
+
+		//6.2 SOLUTION
+		$(document).ready(function () {
 			$("#reverse-button").click(function () {
-				$("#divcutext").animate({right: '230px'})
+				$("#divcutext").animate({ left: '0px' })
 			});
 		});
+
+		//6.3 SOLUTION
+		$(document).ready(
+			function (){
+				$(".button").hover(
+					function (){
+						$(this).css(
+							{
+								"width": "11em",
+								"height": "11em",
+								"font-size": "22px"
+							}
+						)
+					},
+					function (){
+						$(this).css(
+							{
+								"width": "10em",
+								"height": "10em",
+								"font-size": "18px"
+							}
+						)
+					}
+				)
+			}
+		)
+
 		// sfârșit bloc așteptare încărcare
 	</script>
 	<script>
@@ -30,6 +60,7 @@
 			color: white;
 			background-color: green;
 			border-radius: 10px;
+			font-size: 18px
 		}
 
 		#divcutext {
@@ -47,10 +78,9 @@
 	</div>
 
 	<form>
-		<input type="button" id="btnschimbator" value="Schimbă" />
-		<input type="button" id="reverse-button" value="Reverse" />
+		<input class= "button" type="button" id="btnschimbator" value="Schimbă" />
+		<input class= "button" type="button" id="reverse-button" value="Reverse" />
 	</form>
-
 
 </body>
 
@@ -58,9 +88,9 @@
 <!--
 6.1 Executati. Apasati butonul verde. NU SE INTAMPLA NIMIC
     Eliminati comentariul pentru position:relative;. Executati din nou si apasati butonul verde. Ce observati? SE MISCA CUTIA GALBENA
-6.2
- Creati o noua functie care readuce #divcutext la starea initiala.
-6.3
+6.2 DONE
+ Creati o noua functie care readuce #divcutext la starea initiala. 
+6.3 DONE
   Stiind ca se poate simula extinderea dimensiunii suprafetei (width,height) si schimbarea dimensiunii fontului(fontSize), 
   modificati codul sursa pentru a adauga aceste efecte asupra butonului la evenimentul de hover:
   la mouse in cresc aceste caracteristici, la mouse out, descresc.

@@ -1,0 +1,138 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () { // varianta scurtă; s-a schimbat doar acest rând (în loc de "$(document).ready(function() {", avem "$(function(){").
+			var clicknumber = 0;
+			$("#Products").click(function () {
+				/* completeaza */
+			});
+
+
+		});
+
+	</script>
+	<style>
+		.container {
+			margins: 2% auto;
+			padding: 10px 0px;
+			background-color: #444;
+			color: white;
+		}
+
+		#wrapper {
+			width: 80%;
+			
+		}
+
+		#list{
+			width: 4%;
+			display: none;
+		}
+
+		#list-contacts{
+			width: 8%;
+			position: relative;
+			left: 170px;
+			text-align: left;
+			display: none;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0px 0px;
+			padding: 0;
+		}
+
+		#wrapper ul li {
+			display: inline;
+			padding: 10px 20px;
+			font: 12px arial, sans-serif;
+			text-align: center;
+
+		}
+
+		#list ul li {
+			padding: 10px 20px;
+			font: 12px arial, sans-serif;
+			text-align: left;
+		}
+
+		#list-contacts ul li {
+			padding: 10px 20px;
+			font: 12px arial, sans-serif;
+			text-align: left;
+		}
+
+		li:hover {
+			background-color: black;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div  class="container" id="wrapper">
+		<ul id="menu">
+			<li id="Home">Home</li>
+			<li id="Products">Products</li>
+			<li id="Contacts">Contact</li>
+		</ul>
+	</div>
+	<div id="list" class="container">
+		<ul id="products-list">
+			<li>Laptop</li>
+			<li>TV</li>
+			<li>Phone</li>
+		</ul>
+	</div>
+	<div id="list-contacts" class="container">
+		<ul id="contacts-list">
+			<li>Message US</li>
+			<li>Find us on Map</li>
+		</ul>
+	</div>
+	<script>
+		$("#Home").hover(
+			function () {
+				$("#list").slideToggle()
+			},
+			function () {
+				$("#list").slideToggle()
+			}
+		)
+
+		$("#Contacts").hover(
+			function () {
+				$("#list-contacts").slideToggle()
+			},
+			function () {
+				$("#list-contacts").slideToggle()
+			}
+		)
+		
+	</script>
+
+</body>
+
+</html>
+<!--
+8.1 Stiind ca JQuery are urmatoarele metode de culisare(slide) asociate unui element:
+	slideDown()
+	slideUp()
+	slideToggle()
+cu sintaxa 
+	$(selector).slideDown(speed,callback);
+modificati pagina html astfel incat la evenimente de click, pentru meniul Products
+sa fie vizibil un submeniu care sa contina elementele mobiles, smartTVs, laptops.
+Submeniul dispare cand utilizatorul modifica punctul de interes din zona respectivului meniu.
+
+! speed poate avea valori numerice(ex: 100, 1000, etc) sau nominale ca 'slow'
+8.2 DONE
+Adaugati si pentru meniul Contact
+ un submeniu care sa contina elementele Trimite-ne mesaj si Localizare pe harta.
+
+-->
