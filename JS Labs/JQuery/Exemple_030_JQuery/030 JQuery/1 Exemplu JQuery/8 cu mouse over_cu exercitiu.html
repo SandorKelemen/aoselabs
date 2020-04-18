@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			$(function(){ // varianta scurtă; s-a schimbat doar acest rând (în loc de "$(document).ready(function() {", avem "$(function(){").
+				var clicknumber=0;
+				$("#Products").click(function(){
+						/* completeaza */	
+				});
+			
+			
+	});
+			
+	</script>
+		<style>
+		#wrapper{
+		width:80%;
+		margins: 2% auto;
+		padding:10px 0px;
+		background-color: #444;
+		color:white;
+		}
+		ul#menu{ 
+			list-style-type: none;
+			margin: 0px 0px;
+			padding: 0;
+		}
+	    ul li{
+			display: inline;
+			padding: 10px 20px;
+			font: 12px arial, sans-serif;
+			text-align: center;
+			
+		}
+	    li#menu:hover{
+			background-color: black;
+		}
+		
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="menu">
+				<li id="Home">Home</li>	                   		
+				<li id="Products">Products</li>
+				<li>Contact</li>
+			</ul>
+			</div>
+		
+		</body>
+</html>
+<!--
+8.1 Stiind ca JQuery are urmatoarele metode de culisare(slide) asociate unui element:
+	slideDown()
+	slideUp()
+	slideToggle()
+cu sintaxa 
+	$(selector).slideDown(speed,callback);
+modificati pagina html astfel incat la evenimente de click, pentru meniul Products
+sa fie vizibil un submeniu care sa contina elementele mobiles, smartTVs, laptops.
+Submeniul dispare cand utilizatorul modifica punctul de interes din zona respectivului meniu.
+
+! speed poate avea valori numerice(ex: 100, 1000, etc) sau nominale ca 'slow'
+8.2 
+Adaugati si pentru meniul Contact
+ un submeniu care sa contina elementele Trimite-ne mesaj si Localizare pe harta.
+
+-->

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Exemplu JavaScript</title>
+    <script type="text/javascript">
+        firstClick = true
+        function changeText() {
+            var divul = document.getElementById('textu');
+            if(firstClick){
+                divul.innerHTML = 'S-a apasat butonul.';
+                firstClick = false;
+            } else{
+                divul.innerHTML = 'Apasati butonul.'
+                firstClick = true;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="textu">Apasati butonul.</div>
+    <form>
+        <input type="button" value="Butonas" id="butonu" onclick="changeText()">
+    </form>
+</body>
+
+</html>
+<!--
+Modificati codul sursa astfel incat la urmatorul click sa revina la textul initial
+->>
