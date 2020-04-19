@@ -1,1 +1,1 @@
-<h1> Lab 4 works can be found in <i>JavaScript</i> folder!</h1>
+<h1> Lab 4 works can be found in <i>JSLabs</i> folder!</h1>
