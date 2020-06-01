@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS date_personale(
+	nume varchar (50) not null,
+    prenume varchar (50) not null,
+    tata varchar (50) null,
+    mama varchar (50) null,
+    cnp varchar (13) not null,
+    serie_nr_buletin varchar (8) not null,
+    data_nasterii datetime null,
+    adresa varchar (50) null,
+    casatorit varchar (2) null,
+    copii varchar (50) null,
+    PRIMARY KEY(cnp));
+
+CREATE TABLE IF NOT EXISTS salarii(
+    salar_net int not null,
+    cnp varchar (13) not null,
+    PRIMARY KEY(cnp));
